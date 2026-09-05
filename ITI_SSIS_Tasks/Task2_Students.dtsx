@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{757E8066-78A3-4431-8BCE-7FE866313214}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{0CCD2D13-0C8B-47F5-94DB-23FB386DF21A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -57,7 +57,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{25527ABF-2485-4AB2-9D22-A27D96A902E3}"
-          SQLTask:SqlStatementSource="BACKUP DATABASE [Test] &#xA;TO DISK = 'F:\Training-DataEngineering\Tasks\ssis\ITI_SSIS_Tasks\ITI_SSIS_Tasks\Backup\Test.bak' &#xA;WITH FORMAT, INIT;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="BACKUP DATABASE [Test] &#xA;TO DISK = 'F:\Training-DataEngineering\Tasks\ssis\ITI_SSIS_Tasks\ITI_SSIS_Tasks\BckupTest\Test.bak' &#xA;WITH FORMAT, INIT;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -617,6 +617,10 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\Backup Test Database"
+          TopLeft="256.333319628405,217.833331856794" />
+        <NodeLayout
           Size="194.4,41.6"
           Id="Package\Clear Student if Exists"
           TopLeft="244.666653599177,67.8999995660782" />
@@ -646,10 +650,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\Backup Test Database"
-          TopLeft="256.333319628405,217.833331856794" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="348.216654487038,181.966665937437">
@@ -740,7 +740,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Copy and Transform Student Data\Source ITI Student">
+    design-time-name="Package\Copy and Transform Student Data\Destination Test">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -753,7 +753,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Copy and Transform Student Data\Destination Test">
+    design-time-name="Package\Copy and Transform Student Data\Source ITI Student">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
